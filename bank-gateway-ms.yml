@@ -6,10 +6,17 @@ spring:
     gateway:
       routes:
       - id: products
-        uri: http://localhost:8010
+        uri: lb://BANK-PRODUCTS-MS
         predicates:
         - Path=/api/v1/products/**
       - id: transaction
-        uri: http://localhost:8020/
+        uri: lb://BANK-TRANSACTIONS-MS
         predicates:
         - Path=/api/v1/transactions/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
