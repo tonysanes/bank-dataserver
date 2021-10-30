@@ -1,0 +1,11 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: bank-transactions-ms
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
