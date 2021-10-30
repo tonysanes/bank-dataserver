@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: bank-products-ms
+  cloud:
+    config:
+      uri: http://localhost:8888
 eureka:
   client:
     serviceUrl:
