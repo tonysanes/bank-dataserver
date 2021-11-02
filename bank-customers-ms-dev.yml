@@ -11,9 +11,9 @@ eureka:
 spring:
   data:
     mongodb:
-      host: localhost
+      #host: localhost
       port: 27017
-      authentication-database: bank-customers-db
+      #authentication-database: bank-customers-db
       username: admin
       password: admin
       database: bank-customers-db
