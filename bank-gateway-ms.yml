@@ -13,6 +13,10 @@ spring:
         uri: lb://BANK-TRANSACTIONS-MS
         predicates:
         - Path=/api/v1/transactions/**
+      - id: customers
+        uri: lb://BANK-CUSTOMERS-MS
+        predicates:
+        - Path=/api/v1/customers/**
 
 eureka:
   client:
